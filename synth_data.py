@@ -2,15 +2,14 @@
 # -*- coding: utf-8 -*-
 
 import logging
-import requests
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import yfinance as yf
 import mplfinance as mpf
+import argparse
 
 from arch import arch_model
-from datetime import timedelta
 from scipy import stats
 
 # Para la t-copula manual
@@ -24,8 +23,15 @@ import statsmodels.api as sm  # para QQ-plot más avanzado (opcional)
 ##############################################################################
 # LOGGING GLOBAL
 ##############################################################################
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+def setup_logging(level: str = "INFO", log_file: str | None = None) -> logging.Logger:
+    """Configure logging and return a module-level logger."""
+    numeric_level = getattr(logging, level.upper(), logging.INFO)
+    logging.basicConfig(level=numeric_level,
+                        filename=log_file,
+                        format="%(asctime)s - %(levelname)s - %(message)s")
+    return logging.getLogger(__name__)
+
+logger = setup_logging()
 
 ##############################################################################
 # A. UTILS: near-PD (clipping y Higham), rank-transform
@@ -303,8 +309,13 @@ def validate_t_copula(copula_obj, data_real, n_samples=10000):
 # E. DESCARGA DE TICKERS S&P500
 ##############################################################################
 def get_sp500_symbols():
+    """Obtiene los tickers del S&P500 desde Wikipedia."""
     url = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
-    tables = pd.read_html(url)
+    try:
+        tables = pd.read_html(url)
+    except Exception as exc:
+        logger.error("Error al obtener símbolos del S&P500: %s", exc)
+        raise
     df = tables[0]
     tickers = df['Symbol'].tolist()
     tickers = [t.replace('.', '-') for t in tickers]
@@ -314,7 +325,13 @@ def get_sp500_symbols():
 # F. DESCARGA DE PRECIOS DESDE YFINANCE
 ##############################################################################
 def download_prices(tickers, start_date="2018-01-01", end_date=None):
-    data = yf.download(tickers, start=start_date, end=end_date, progress=False)['Adj Close']
+    """Descarga precios usando yfinance y devuelve un DataFrame."""
+    try:
+        data = yf.download(tickers, start=start_date, end=end_date, progress=False)[
+            'Adj Close']
+    except Exception as exc:
+        logger.error("Error al descargar precios: %s", exc)
+        raise
     if isinstance(data, pd.Series):
         data = data.to_frame()
     data = data.dropna(how='all')
@@ -600,17 +617,38 @@ def plot_all_closes_together(df_ohlc):
     plt.show()
 
 ##############################################################################
-# L. MAIN
+# L. UTILIDADES CLI
+##############################################################################
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Generar datos sintéticos a partir de GARCH y t-copula")
+    parser.add_argument("--start-date", default="2018-01-01",
+                        help="Fecha inicio para descargar históricos")
+    parser.add_argument("--end-date", default=None,
+                        help="Fecha fin para descargar históricos")
+    parser.add_argument("--tickers", type=int, default=5,
+                        help="Número de activos del S&P500 a utilizar")
+    parser.add_argument("--log-file", default=None,
+                        help="Archivo opcional de log")
+    parser.add_argument("--log-level", default="INFO",
+                        help="Nivel de logging")
+    return parser.parse_args()
+
+##############################################################################
+# M. MAIN
 ##############################################################################
 if __name__ == "__main__":
+    args = parse_args()
+    logger = setup_logging(args.log_level, args.log_file)
+
     # 1. Descarga tickers S&P500
     sp500_symbols = get_sp500_symbols()
-    # Usa unos pocos para ejemplo
-    sp500_symbols = sp500_symbols[:5]
+    sp500_symbols = sp500_symbols[: args.tickers]
 
     # 2. Descarga de precios
-    start_date = "2018-01-01"
-    df_sp500 = download_prices(sp500_symbols, start_date=start_date, end_date=None)
+    df_sp500 = download_prices(
+        sp500_symbols, start_date=args.start_date, end_date=args.end_date
+    )
     df_sp500 = df_sp500.dropna()
 
     # 3. Calibra GARCH
