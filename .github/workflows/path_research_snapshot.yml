@@ -1,0 +1,31 @@
+name: Path research input snapshot
+on:
+  push:
+    branches: ["research/path-validation-2026-10-30"]
+    paths: [".github/workflows/path_research_snapshot.yml"]
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: "3.13"
+      - run: python -m pip install -e '.[yahoo]'
+      - name: Snapshot adjusted SPY history
+        run: |
+          synthetic-market download --tickers SPY --start 1993-01-01 --end 2026-10-30 --out outputs/path-input
+          git archive HEAD -o outputs/path-input/source.tar
+          python -m pip download --no-deps --only-binary=:all: arch==8.0.0 ruff hypothesis -d outputs/path-input/wheels
+          python -m pip freeze > outputs/path-input/environment.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: path-research-input
+          path: outputs/path-input/
+          retention-days: 30
+          if-no-files-found: error
