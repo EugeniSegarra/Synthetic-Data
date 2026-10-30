@@ -44,6 +44,7 @@ jobs:
               print("SPY_PATHS_B64_BEGIN")
               print(packed)
               print("SPY_PATHS_B64_END")
+              print("SPY_SMALL_JSON",json.dumps({"paths":np.round(p[:,::12],0).astype(int).tolist(),"q05":np.round(np.quantile(p,0.05,axis=0)[::12],0).astype(int).tolist(),"q50":np.round(np.quantile(p,0.50,axis=0)[::12],0).astype(int).tolist(),"q95":np.round(np.quantile(p,0.95,axis=0)[::12],0).astype(int).tolist()},separators=(",",":")))
               print("SPY_FINAL_QUANTILES",np.quantile(p[:,-1], [0.05,0.5,0.95]).round(3).tolist())
               print("SPY_TOTAL_RETURNS",np.quantile(p[:,-1]/origin-1,[0.05,0.5,0.95]).round(4).tolist())
           PY
