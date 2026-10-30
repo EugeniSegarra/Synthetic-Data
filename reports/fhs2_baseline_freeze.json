@@ -1,0 +1,14 @@
+{
+  "base_commit": "4230097d819d403e9a8a9451077da3002f1a74a8",
+  "core_hashes": {
+    "src/synthetic_market/cli.py": "11b6b536586c8ab0caa7b2d29d3b5b2d3b6ffe2deefff6cee4e51b1b493bc5e9",
+    "src/synthetic_market/__init__.py": "8036663c1f70b217add49003ac56e4d04cf13f976be17bfd7dfa93f471f9e557",
+    "src/synthetic_market/data.py": "512a741f060c8fd2bb293df1c0c61d10a9b0d4317b6efe6e8a53b9c01444445b",
+    "src/synthetic_market/validation.py": "1ab2d8cca02d2e04e1de2818ec78668bed18e8eb083a74f5fb0cb5c45a1ce488",
+    "src/synthetic_market/model.py": "29994916eed8272bb50e108a28d451e41502cd376a94544af56ef6493ea843b6",
+    "src/synthetic_market/path_validation.py": "0990df6a03d1c438239f18eeda46c2c7df3e3313c46ac2835b084d4814911f42",
+    "src/synthetic_market/__main__.py": "f9eba91210fea277a80405539502572f275a02a0ee4d77a57509284cbcba5b6e"
+  },
+  "input_sha256": "264ff7216c975000c8ffb8be3fd45a79d37d9642d22c05a1b63f68742e0428c6",
+  "baseline_tests": 198
+}
