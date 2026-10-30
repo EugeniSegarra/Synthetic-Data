@@ -1,0 +1,49 @@
+name: SPY FHS visualization data
+on:
+  push:
+    branches: ["viz/spy-100-paths-2026-10-30"]
+permissions:
+  contents: read
+jobs:
+  render-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: "3.12"
+      - name: Install published package
+        run: python -m pip install -e ".[yahoo]"
+      - name: Generate SPY paths with published engine
+        run: |
+          synthetic-market simulate --tickers SPY --start 2015-01-01 --end 2026-10-30 --paths 100 --horizon 126 --seed 20261030 --no-csv --out outputs/spy
+      - name: Print compressed sampled paths for user visualization
+        run: |
+          python - <<'PY'
+          import base64
+          import json
+          import zlib
+          import numpy as np
+          from pathlib import Path
+          base=Path("outputs/spy")
+          with np.load(base/"scenarios.npz",allow_pickle=False) as z:
+              p=z["close"][:,:,0].astype(float)
+              origin=float(z["origin"][0])
+              model=json.loads((base/"model.json").read_text())
+              manifest=json.loads((base/"manifest.json").read_text())
+              q=np.rint(10000*np.log(p[:,::2]/origin))
+              assert np.isfinite(p).all() and np.max(np.abs(q))<32767
+              packed=base64.b64encode(zlib.compress(q.astype("<i2").tobytes(),9)).decode("ascii")
+              print("SPY_INPUT_LAST_DAY",str(z["source_dates"][-1]))
+              print("SPY_ORIGIN",origin)
+              print("SPY_MODEL_JSON",json.dumps(model,sort_keys=True)[:1100])
+              print("SPY_DIMENSIONS",p.shape[0],p.shape[1],q.shape[1])
+              print("SPY_PATHS_B64_BEGIN")
+              print(packed)
+              print("SPY_PATHS_B64_END")
+              print("SPY_FINAL_QUANTILES",np.quantile(p[:,-1], [0.05,0.5,0.95]).round(3).tolist())
+              print("SPY_TOTAL_RETURNS",np.quantile(p[:,-1]/origin-1,[0.05,0.5,0.95]).round(4).tolist())
+          PY
