@@ -31,7 +31,7 @@ jobs:
           base=Path("outputs/spy")
           with np.load(base/"scenarios.npz",allow_pickle=False) as z:
               p=z["close"][:,:,0].astype(float)
-              origin=float(z["origin"][0])
+              origin=float(p[0,0]/np.exp(z["log_returns"][0,0,0]))
               model=json.loads((base/"model.json").read_text())
               manifest=json.loads((base/"manifest.json").read_text())
               q=np.rint(10000*np.log(p[:,::2]/origin))
