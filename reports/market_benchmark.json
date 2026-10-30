@@ -1,0 +1,1430 @@
+{
+  "assets": [
+    "SPY",
+    "TLT",
+    "GLD"
+  ],
+  "config": {
+    "mean": "zero",
+    "volatility": "auto"
+  },
+  "data_sha256": "4869dba4e670bd94931ab3a448b11b20896530de3dfcd035ec92e9f7b486c647",
+  "energy_pairs": 4096,
+  "environment": {
+    "dependencies": {
+      "arch": "8.0.0",
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scipy": "1.17.0",
+      "statsmodels": "0.15.0",
+      "yfinance": "1.7.0"
+    },
+    "package_version": "1.0.0",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+    "python": "3.12.14"
+  },
+  "interpretation": "Observed retrospective benchmark, not universal calibration or prospective performance.",
+  "review_date": "2026-10-30",
+  "seed": 20261030,
+  "source": {
+    "alignment": {
+      "dropped_dates": [],
+      "dropped_dates_count": 0,
+      "input_dates": 4232,
+      "policy": "strict",
+      "retained_dates": 4232
+    },
+    "auto_adjust": true,
+    "frequency": "daily_observations",
+    "interpretation": "Adjusted OHLC research series; not executable historical quotes.",
+    "observed_end": "2026-10-29T00:00:00",
+    "observed_start": "2010-01-04T00:00:00",
+    "price_basis": "adjusted",
+    "provider_version": "1.7.0",
+    "requested_end_exclusive": "2026-10-30",
+    "requested_start": "2010-01-01",
+    "requested_tickers": [
+      "SPY",
+      "TLT",
+      "GLD"
+    ],
+    "source": "Yahoo Finance via yfinance"
+  },
+  "weights": {
+    "GLD": 0.3333333333333333,
+    "SPY": 0.3333333333333333,
+    "TLT": 0.3333333333333333
+  },
+  "windows": [
+    {
+      "assets": [
+        "SPY",
+        "TLT",
+        "GLD"
+      ],
+      "coexceedances": {
+        "baseline": {
+          "0.01": [
+            {
+              "assets": [
+                "SPY",
+                "TLT"
+              ],
+              "expected_joint_violations": 0.0,
+              "mean_predicted_joint_probability": 0.0,
+              "observations": 253,
+              "observed_joint_rate": 0.007905138339920948,
+              "observed_joint_violations": 2
+            },
+            {
+              "assets": [
+                "SPY",
+                "GLD"
+              ],
+              "expected_joint_violations": 0.10059642147117286,
+              "mean_predicted_joint_probability": 0.00039761431411530773,
+              "observations": 253,
+              "observed_joint_rate": 0.003952569169960474,
+              "observed_joint_violations": 1
+            },
+            {
+              "assets": [
+                "TLT",
+                "GLD"
+              ],
+              "expected_joint_violations": 0.2011928429423457,
+              "mean_predicted_joint_probability": 0.0007952286282306155,
+              "observations": 253,
+              "observed_joint_rate": 0.007905138339920948,
+              "observed_joint_violations": 2
+            }
+          ],
+          "0.05": [
+            {
+              "assets": [
+                "SPY",
+                "TLT"
+              ],
+              "expected_joint_violations": 0.2011928429423457,
+              "mean_predicted_joint_probability": 0.0007952286282306155,
+              "observations": 253,
+              "observed_joint_rate": 0.007905138339920948,
+              "observed_joint_violations": 2
+            },
+            {
+              "assets": [
+                "SPY",
+                "GLD"
+              ],
+              "expected_joint_violations": 1.0059642147117356,
+              "mean_predicted_joint_probability": 0.003976143141153105,
+              "observations": 253,
+              "observed_joint_rate": 0.019762845849802372,
+              "observed_joint_violations": 5
+            },
+            {
+              "assets": [
+                "TLT",
+                "GLD"
+              ],
+              "expected_joint_violations": 2.514910536779327,
+              "mean_predicted_joint_probability": 0.009940357852882716,
+              "observations": 253,
+              "observed_joint_rate": 0.015810276679841896,
+              "observed_joint_violations": 4
+            }
+          ]
+        },
+        "model": {
+          "0.01": [
+            {
+              "assets": [
+                "SPY",
+                "TLT"
+              ],
+              "expected_joint_violations": 0.0,
+              "mean_predicted_joint_probability": 0.0,
+              "observations": 253,
+              "observed_joint_rate": 0.0,
+              "observed_joint_violations": 0
+            },
+            {
+              "assets": [
+                "SPY",
+                "GLD"
+              ],
+              "expected_joint_violations": 0.10059642147117286,
+              "mean_predicted_joint_probability": 0.00039761431411530773,
+              "observations": 253,
+              "observed_joint_rate": 0.0,
+              "observed_joint_violations": 0
+            },
+            {
+              "assets": [
+                "TLT",
+                "GLD"
+              ],
+              "expected_joint_violations": 0.10059642147117286,
+              "mean_predicted_joint_probability": 0.00039761431411530773,
+              "observations": 253,
+              "observed_joint_rate": 0.003952569169960474,
+              "observed_joint_violations": 1
+            }
+          ],
+          "0.05": [
+            {
+              "assets": [
+                "SPY",
+                "TLT"
+              ],
+              "expected_joint_violations": 0.4023856858846914,
+              "mean_predicted_joint_probability": 0.001590457256461231,
+              "observations": 253,
+              "observed_joint_rate": 0.0,
+              "observed_joint_violations": 0
+            },
+            {
+              "assets": [
+                "SPY",
+                "GLD"
+              ],
+              "expected_joint_violations": 1.307753479125246,
+              "mean_predicted_joint_probability": 0.005168986083498996,
+              "observations": 253,
+              "observed_joint_rate": 0.011857707509881422,
+              "observed_joint_violations": 3
+            },
+            {
+              "assets": [
+                "TLT",
+                "GLD"
+              ],
+              "expected_joint_violations": 1.9113320079522933,
+              "mean_predicted_joint_probability": 0.007554671968190882,
+              "observations": 253,
+              "observed_joint_rate": 0.007905138339920948,
+              "observed_joint_violations": 2
+            }
+          ]
+        }
+      },
+      "diagnostic_flags": [],
+      "evaluation": "fixed_parameter_sequential_one_step",
+      "methodology": {
+        "baseline": "Joint raw training log-return bootstrap, recentered to the fitted model mean",
+        "coexceedance_rule": "Observed and predictive events use the same model-specific marginal thresholds",
+        "energy_pairs": 4096,
+        "energy_second_term": "Uniform iid pairs with replacement; common pairs for model and baseline",
+        "expected_shortfall": "Worst alpha empirical probability mass, including fractional boundary mass",
+        "marginal_forecast": "All equally weighted training innovation rows; no simulation subsample",
+        "portfolio_units": "Decimal simple return: expm1(asset log returns) @ weights",
+        "quantile_method": "inverted_cdf",
+        "scores_units": "Decimal log returns; variogram is squared differences of order 0.5",
+        "seed": 20261030,
+        "tail_rule": "Strict return < empirical quantile; boundary probability is reported separately",
+        "undercoverage_flag": "Descriptive heuristic: nominal expected breaches >= 10 and observed/nominal >= 2; no significance claim and no forecast recalibration",
+        "variogram_order": 0.5,
+        "variogram_weights": "Equal over unordered asset pairs; weights sum to one"
+      },
+      "metrics_baseline": {
+        "crps_by_asset": {
+          "GLD": 0.006499736086523828,
+          "SPY": 0.01065622971233919,
+          "TLT": 0.006580321769433662
+        },
+        "crps_mean": 0.007912095856098894,
+        "energy_score_mean": 0.015974562905655965,
+        "variogram_score_mean": 0.0038606694838111957
+      },
+      "metrics_model": {
+        "crps_by_asset": {
+          "GLD": 0.006396301439141099,
+          "SPY": 0.009352366173395433,
+          "TLT": 0.006469661447679638
+        },
+        "crps_mean": 0.0074061096867387224,
+        "energy_score_mean": 0.014926737012604213,
+        "variogram_score_mean": 0.0025885062297606788
+      },
+      "model_summary": {
+        "assets": [
+          "SPY",
+          "TLT",
+          "GLD"
+        ],
+        "config": {
+          "mean": "zero",
+          "min_observations": 250,
+          "persistence_limit": 0.9999,
+          "volatility": "auto"
+        },
+        "data_sha256": "1fcfbfcdf2f41da2655884e216b54249275b02d73d38a2687adfa89491dc0f76",
+        "fit": {
+          "GLD": {
+            "alpha": 0.04166558326500619,
+            "beta": 0.9494296980379338,
+            "bic": 6706.61640086552,
+            "candidate_bic": {
+              "garch": 6706.61640086552,
+              "gjr": 6714.414269466661
+            },
+            "converged": true,
+            "empirical_persistence": 0.9910952813029399,
+            "gamma": 0.0,
+            "innovation_max": 4.836120128597994,
+            "innovation_min": -7.147953852377069,
+            "mean_daily_log": 0.0,
+            "negative_second_moment": 0.5254055776507355,
+            "omega": 8.593003434263705e-07,
+            "raw_standardized_residual_mean": 0.012419310050944253,
+            "raw_standardized_residual_std": 1.0004658779841624,
+            "rejected_candidates": {},
+            "residual_acf": {
+              "1": -0.010054402503542123,
+              "10": -0.02357833203190065,
+              "20": -0.019616588746827868,
+              "5": 0.0015744954674568015
+            },
+            "residual_centering_and_scaling": "sample mean, population standard deviation",
+            "selected": "garch",
+            "squared_residual_acf": {
+              "1": 0.08265834522287195,
+              "10": 0.010623301647716746,
+              "20": -0.007905190838749993,
+              "5": -0.011872822306876205
+            },
+            "warnings": []
+          },
+          "SPY": {
+            "alpha": 1.820607199763264e-10,
+            "beta": 0.814516975279584,
+            "bic": 5892.98706790012,
+            "candidate_bic": {
+              "garch": 6041.993382844381,
+              "gjr": 5892.98706790012
+            },
+            "converged": true,
+            "empirical_persistence": 0.9848438042643315,
+            "gamma": 0.2982066156544658,
+            "innovation_max": 3.5947329249987843,
+            "innovation_min": -6.556405989766955,
+            "mean_daily_log": 0.0,
+            "negative_second_moment": 0.5711705235944387,
+            "omega": 3.8070309953404852e-06,
+            "raw_standardized_residual_mean": 0.05423329224086729,
+            "raw_standardized_residual_std": 0.9981131376982639,
+            "rejected_candidates": {},
+            "residual_acf": {
+              "1": -0.015083349516773993,
+              "10": 0.02174945445521688,
+              "20": 0.01097608518472148,
+              "5": -0.040554778561034246
+            },
+            "residual_centering_and_scaling": "sample mean, population standard deviation",
+            "selected": "gjr",
+            "squared_residual_acf": {
+              "1": -0.022356141308437313,
+              "10": 0.03060063381701708,
+              "20": -0.01592578618625659,
+              "5": -0.020306960025224127
+            },
+            "warnings": []
+          },
+          "TLT": {
+            "alpha": 0.04618655271265503,
+            "beta": 0.9598694456223644,
+            "bic": 6139.811409439879,
+            "candidate_bic": {
+              "garch": 6140.358189353946,
+              "gjr": 6139.811409439879
+            },
+            "converged": true,
+            "empirical_persistence": 0.9924365099395184,
+            "gamma": -0.025868113634329375,
+            "innovation_max": 3.7793952907772654,
+            "innovation_min": -6.632108013358547,
+            "mean_daily_log": 0.0,
+            "negative_second_moment": 0.5264971612551883,
+            "omega": 4.952971214393015e-07,
+            "raw_standardized_residual_mean": 0.0368909351608424,
+            "raw_standardized_residual_std": 0.9993774168923005,
+            "rejected_candidates": {},
+            "residual_acf": {
+              "1": -0.055327323434518405,
+              "10": 0.03323980859301921,
+              "20": 0.009909197705587689,
+              "5": -0.05797873166835171
+            },
+            "residual_centering_and_scaling": "sample mean, population standard deviation",
+            "selected": "gjr",
+            "squared_residual_acf": {
+              "1": 0.025797909606619616,
+              "10": 0.00020059101994040996,
+              "20": -0.0013084973849841444,
+              "5": -0.0003739310935815321
+            },
+            "warnings": []
+          }
+        },
+        "limitations": [
+          "Finite empirical innovation support; no unseen standardized tail extrapolation.",
+          "Frozen cross-asset empirical dependence, conditional on the training period.",
+          "Zero log-return drift does not imply zero arithmetic expected return.",
+          "OHLC contains no intraday ordering, liquidity, volume or execution model.",
+          "Parameter and model uncertainty are not represented by drawing more paths."
+        ],
+        "method": "joint_filtered_historical_simulation",
+        "ohlc_available": true,
+        "price_basis": "adjusted",
+        "source": {
+          "alignment": {
+            "dropped_dates": [],
+            "dropped_dates_count": 0,
+            "input_dates": 4232,
+            "policy": "strict",
+            "retained_dates": 4232
+          },
+          "auto_adjust": true,
+          "frequency": "daily_observations",
+          "interpretation": "Adjusted OHLC research series; not executable historical quotes.",
+          "observed_end": "2019-12-31T00:00:00",
+          "observed_start": "2010-01-04T00:00:00",
+          "price_basis": "adjusted",
+          "provider_version": "1.7.0",
+          "requested_end_exclusive": "2026-10-30",
+          "requested_start": "2010-01-01",
+          "requested_tickers": [
+            "SPY",
+            "TLT",
+            "GLD"
+          ],
+          "source": "Yahoo Finance via yfinance"
+        },
+        "training_end": "2019-12-31",
+        "training_returns": 2515,
+        "training_start": "2010-01-04"
+      },
+      "name": "covid_2020",
+      "portfolio": {
+        "baseline": {
+          "0.01": {
+            "alpha": 0.01,
+            "coverage": 0.9407114624505929,
+            "expected_violations_empirical_strict": 2.514910536779327,
+            "expected_violations_nominal": 2.5300000000000002,
+            "mean_es_loss": 0.017394702779383105,
+            "mean_expected_shortfall_return": -0.017394702779383105,
+            "mean_quantile_return": -0.0129840078273045,
+            "mean_var_loss": 0.0129840078273045,
+            "nominal_coverage": 0.99,
+            "observations": 253,
+            "observed_to_empirical_expected_ratio": 5.964426877470348,
+            "observed_to_nominal_ratio": 5.928853754940711,
+            "violation_rate": 0.05928853754940711,
+            "violations": 15
+          },
+          "0.05": {
+            "alpha": 0.05,
+            "coverage": 0.9130434782608696,
+            "expected_violations_empirical_strict": 12.574552683896556,
+            "expected_violations_nominal": 12.65,
+            "mean_es_loss": 0.011293093408343793,
+            "mean_expected_shortfall_return": -0.011293093408343793,
+            "mean_quantile_return": -0.00790609660819469,
+            "mean_var_loss": 0.00790609660819469,
+            "nominal_coverage": 0.95,
+            "observations": 253,
+            "observed_to_empirical_expected_ratio": 1.7495652173913132,
+            "observed_to_nominal_ratio": 1.7391304347826086,
+            "violation_rate": 0.08695652173913043,
+            "violations": 22
+          }
+        },
+        "model": {
+          "0.01": {
+            "alpha": 0.01,
+            "coverage": 0.9841897233201581,
+            "expected_violations_empirical_strict": 2.514910536779327,
+            "expected_violations_nominal": 2.5300000000000002,
+            "mean_es_loss": 0.025257794428251358,
+            "mean_expected_shortfall_return": -0.025257794428251358,
+            "mean_quantile_return": -0.018893832181153963,
+            "mean_var_loss": 0.018893832181153963,
+            "nominal_coverage": 0.99,
+            "observations": 253,
+            "observed_to_empirical_expected_ratio": 1.5905138339920928,
+            "observed_to_nominal_ratio": 1.5810276679841895,
+            "violation_rate": 0.015810276679841896,
+            "violations": 4
+          },
+          "0.05": {
+            "alpha": 0.05,
+            "coverage": 0.9486166007905138,
+            "expected_violations_empirical_strict": 12.574552683896556,
+            "expected_violations_nominal": 12.65,
+            "mean_es_loss": 0.016600590500071857,
+            "mean_expected_shortfall_return": -0.016600590500071857,
+            "mean_quantile_return": -0.011746472662437476,
+            "mean_var_loss": 0.011746472662437476,
+            "nominal_coverage": 0.95,
+            "observations": 253,
+            "observed_to_empirical_expected_ratio": 1.033833992094867,
+            "observed_to_nominal_ratio": 1.0276679841897234,
+            "violation_rate": 0.05138339920948617,
+            "violations": 13
+          }
+        }
+      },
+      "schema_version": 1,
+      "split_date": "2019-12-31T00:00:00",
+      "test": {
+        "end": "2020-12-31T00:00:00",
+        "observations": 253,
+        "start": "2020-01-02T00:00:00"
+      },
+      "training": {
+        "data_sha256": "1fcfbfcdf2f41da2655884e216b54249275b02d73d38a2687adfa89491dc0f76",
+        "end": "2019-12-31T00:00:00",
+        "price_observations": 2516,
+        "return_observations": 2515,
+        "start": "2010-01-04T00:00:00"
+      },
+      "warnings": [
+        "Scores and tail counts are diagnostics, not an automatic validation pass.",
+        "Parameters and the innovation law are frozen; only the observed volatility state updates.",
+        "Energy scores use a Monte Carlo second term; paired draws are shared across models and dates.",
+        "No independent-binomial p-values or dependence-robust confidence intervals are claimed.",
+        "The baseline shares the model's log-return mean; neither estimates investment alpha.",
+        "OHLC, transaction costs, intraday execution, and multi-period paths are not validated here.",
+        "Portfolio returns assume all asset returns are already in a common reporting currency.",
+        "The 5% tail has only 12.65 nominal expected breaches in 253 test observations; rare-event conclusions are sample-limited.",
+        "The 1% tail has only 2.53 nominal expected breaches in 253 test observations; rare-event conclusions are sample-limited."
+      ],
+      "weights": {
+        "GLD": 0.3333333333333333,
+        "SPY": 0.3333333333333333,
+        "TLT": 0.3333333333333333
+      }
+    },
+    {
+      "assets": [
+        "SPY",
+        "TLT",
+        "GLD"
+      ],
+      "coexceedances": {
+        "baseline": {
+          "0.01": [
+            {
+              "assets": [
+                "SPY",
+                "TLT"
+              ],
+              "expected_joint_violations": 0.1662251655629135,
+              "mean_predicted_joint_probability": 0.0006622516556291374,
+              "observations": 251,
+              "observed_joint_rate": 0.00796812749003984,
+              "observed_joint_violations": 2
+            },
+            {
+              "assets": [
+                "SPY",
+                "GLD"
+              ],
+              "expected_joint_violations": 0.1662251655629135,
+              "mean_predicted_joint_probability": 0.0006622516556291374,
+              "observations": 251,
+              "observed_joint_rate": 0.0,
+              "observed_joint_violations": 0
+            },
+            {
+              "assets": [
+                "TLT",
+                "GLD"
+              ],
+              "expected_joint_violations": 0.1662251655629135,
+              "mean_predicted_joint_probability": 0.0006622516556291374,
+              "observations": 251,
+              "observed_joint_rate": 0.0,
+              "observed_joint_violations": 0
+            }
+          ],
+          "0.05": [
+            {
+              "assets": [
+                "SPY",
+                "TLT"
+              ],
+              "expected_joint_violations": 0.4986754966887438,
+              "mean_predicted_joint_probability": 0.0019867549668874255,
+              "observations": 251,
+              "observed_joint_rate": 0.01593625498007968,
+              "observed_joint_violations": 4
+            },
+            {
+              "assets": [
+                "SPY",
+                "GLD"
+              ],
+              "expected_joint_violations": 1.0804635761589478,
+              "mean_predicted_joint_probability": 0.004304635761589433,
+              "observations": 251,
+              "observed_joint_rate": 0.01195219123505976,
+              "observed_joint_violations": 3
+            },
+            {
+              "assets": [
+                "TLT",
+                "GLD"
+              ],
+              "expected_joint_violations": 2.4102649006622494,
+              "mean_predicted_joint_probability": 0.009602649006622508,
+              "observations": 251,
+              "observed_joint_rate": 0.00796812749003984,
+              "observed_joint_violations": 2
+            }
+          ]
+        },
+        "model": {
+          "0.01": [
+            {
+              "assets": [
+                "SPY",
+                "TLT"
+              ],
+              "expected_joint_violations": 0.0,
+              "mean_predicted_joint_probability": 0.0,
+              "observations": 251,
+              "observed_joint_rate": 0.0,
+              "observed_joint_violations": 0
+            },
+            {
+              "assets": [
+                "SPY",
+                "GLD"
+              ],
+              "expected_joint_violations": 0.08311258278145675,
+              "mean_predicted_joint_probability": 0.0003311258278145687,
+              "observations": 251,
+              "observed_joint_rate": 0.0,
+              "observed_joint_violations": 0
+            },
+            {
+              "assets": [
+                "TLT",
+                "GLD"
+              ],
+              "expected_joint_violations": 0.08311258278145675,
+              "mean_predicted_joint_probability": 0.0003311258278145687,
+              "observations": 251,
+              "observed_joint_rate": 0.00398406374501992,
+              "observed_joint_violations": 1
+            }
+          ],
+          "0.05": [
+            {
+              "assets": [
+                "SPY",
+                "TLT"
+              ],
+              "expected_joint_violations": 0.4986754966887438,
+              "mean_predicted_joint_probability": 0.0019867549668874255,
+              "observations": 251,
+              "observed_joint_rate": 0.00398406374501992,
+              "observed_joint_violations": 1
+            },
+            {
+              "assets": [
+                "SPY",
+                "GLD"
+              ],
+              "expected_joint_violations": 1.329801324503308,
+              "mean_predicted_joint_probability": 0.0052980132450331,
+              "observations": 251,
+              "observed_joint_rate": 0.0,
+              "observed_joint_violations": 0
+            },
+            {
+              "assets": [
+                "TLT",
+                "GLD"
+              ],
+              "expected_joint_violations": 1.9115894039735033,
+              "mean_predicted_joint_probability": 0.007615894039735073,
+              "observations": 251,
+              "observed_joint_rate": 0.00796812749003984,
+              "observed_joint_violations": 2
+            }
+          ]
+        }
+      },
+      "diagnostic_flags": [
+        {
+          "alpha": 0.05,
+          "expectedn": 12.55,
+          "method": "model",
+          "observedn": 31,
+          "ratio": 2.4701195219123506,
+          "rule": "descriptive_undercoverage",
+          "severity": "warning"
+        },
+        {
+          "alpha": 0.05,
+          "expectedn": 12.55,
+          "method": "baseline",
+          "observedn": 51,
+          "ratio": 4.063745019920319,
+          "rule": "descriptive_undercoverage",
+          "severity": "warning"
+        }
+      ],
+      "evaluation": "fixed_parameter_sequential_one_step",
+      "methodology": {
+        "baseline": "Joint raw training log-return bootstrap, recentered to the fitted model mean",
+        "coexceedance_rule": "Observed and predictive events use the same model-specific marginal thresholds",
+        "energy_pairs": 4096,
+        "energy_second_term": "Uniform iid pairs with replacement; common pairs for model and baseline",
+        "expected_shortfall": "Worst alpha empirical probability mass, including fractional boundary mass",
+        "marginal_forecast": "All equally weighted training innovation rows; no simulation subsample",
+        "portfolio_units": "Decimal simple return: expm1(asset log returns) @ weights",
+        "quantile_method": "inverted_cdf",
+        "scores_units": "Decimal log returns; variogram is squared differences of order 0.5",
+        "seed": 20261030,
+        "tail_rule": "Strict return < empirical quantile; boundary probability is reported separately",
+        "undercoverage_flag": "Descriptive heuristic: nominal expected breaches >= 10 and observed/nominal >= 2; no significance claim and no forecast recalibration",
+        "variogram_order": 0.5,
+        "variogram_weights": "Equal over unordered asset pairs; weights sum to one"
+      },
+      "metrics_baseline": {
+        "crps_by_asset": {
+          "GLD": 0.005349205664076174,
+          "SPY": 0.009116175520234736,
+          "TLT": 0.007631004473656075
+        },
+        "crps_mean": 0.007365461885988995,
+        "energy_score_mean": 0.014775692492877267,
+        "variogram_score_mean": 0.002159884619405654
+      },
+      "metrics_model": {
+        "crps_by_asset": {
+          "GLD": 0.005366444545548158,
+          "SPY": 0.00874296349393143,
+          "TLT": 0.0073986696666746505
+        },
+        "crps_mean": 0.007169359235384746,
+        "energy_score_mean": 0.01453821357915171,
+        "variogram_score_mean": 0.001975665882424802
+      },
+      "model_summary": {
+        "assets": [
+          "SPY",
+          "TLT",
+          "GLD"
+        ],
+        "config": {
+          "mean": "zero",
+          "min_observations": 250,
+          "persistence_limit": 0.9999,
+          "volatility": "auto"
+        },
+        "data_sha256": "d7c7b2332f93d7084c1c7735e5c39a43f5cfd5f49139c1d345dea1eb199f1f5e",
+        "fit": {
+          "GLD": {
+            "alpha": 0.05426738184077867,
+            "beta": 0.9295054334587346,
+            "bic": 8162.6301394698485,
+            "candidate_bic": {
+              "garch": 8162.6301394698485,
+              "gjr": 8169.056080303944
+            },
+            "converged": true,
+            "empirical_persistence": 0.9837728152995133,
+            "gamma": 0.0,
+            "innovation_max": 4.822389643786324,
+            "innovation_min": -6.501416180340849,
+            "mean_daily_log": 0.0,
+            "negative_second_moment": 0.5378703014588192,
+            "omega": 1.6364167820666045e-06,
+            "raw_standardized_residual_mean": 0.016179586854874233,
+            "raw_standardized_residual_std": 1.000279884488889,
+            "rejected_candidates": {},
+            "residual_acf": {
+              "1": 0.011083394578180224,
+              "10": -0.016067654829507852,
+              "20": -0.020544746305798157,
+              "5": -0.01040303751981578
+            },
+            "residual_centering_and_scaling": "sample mean, population standard deviation",
+            "selected": "garch",
+            "squared_residual_acf": {
+              "1": 0.03829025836809025,
+              "10": 0.012602136349295228,
+              "20": -0.010898247048950168,
+              "5": -0.005039981143572891
+            },
+            "warnings": []
+          },
+          "SPY": {
+            "alpha": 0.03551318145327779,
+            "beta": 0.7869153230237559,
+            "bic": 7429.942571052792,
+            "candidate_bic": {
+              "garch": 7556.573517394787,
+              "gjr": 7429.942571052792
+            },
+            "converged": true,
+            "empirical_persistence": 0.990603882091107,
+            "gamma": 0.289378757623714,
+            "innovation_max": 3.6004345647107576,
+            "innovation_min": -7.163622554628033,
+            "mean_daily_log": 0.0,
+            "negative_second_moment": 0.58116006508244,
+            "omega": 4.467921080635209e-06,
+            "raw_standardized_residual_mean": 0.0575944943064896,
+            "raw_standardized_residual_std": 0.9979922382569116,
+            "rejected_candidates": {},
+            "residual_acf": {
+              "1": -0.0193831295284314,
+              "10": 0.011132934337766139,
+              "20": 0.009634685973713298,
+              "5": -0.030803293023732952
+            },
+            "residual_centering_and_scaling": "sample mean, population standard deviation",
+            "selected": "gjr",
+            "squared_residual_acf": {
+              "1": -0.015853096534806377,
+              "10": 0.016640182333926057,
+              "20": 0.011834253217581497,
+              "5": -0.025359035836039497
+            },
+            "warnings": []
+          },
+          "TLT": {
+            "alpha": 0.08013977010054829,
+            "beta": 0.8861150705627896,
+            "bic": 7522.989918777881,
+            "candidate_bic": {
+              "garch": 7522.989918777881,
+              "gjr": 7523.772105738824
+            },
+            "converged": true,
+            "empirical_persistence": 0.9662548406633379,
+            "gamma": 0.0,
+            "innovation_max": 4.1368758785628845,
+            "innovation_min": -6.125880226439047,
+            "mean_daily_log": 0.0,
+            "negative_second_moment": 0.5197172281652314,
+            "omega": 2.58683293836977e-06,
+            "raw_standardized_residual_mean": 0.0323998531924549,
+            "raw_standardized_residual_std": 0.9996601261833199,
+            "rejected_candidates": {},
+            "residual_acf": {
+              "1": -0.038246351460709226,
+              "10": 0.03336136084094645,
+              "20": 0.023090128658901393,
+              "5": -0.04906977044068901
+            },
+            "residual_centering_and_scaling": "sample mean, population standard deviation",
+            "selected": "garch",
+            "squared_residual_acf": {
+              "1": 0.01721595659886362,
+              "10": 0.004042822594257559,
+              "20": -0.003980618090992337,
+              "5": -3.1177528984133545e-05
+            },
+            "warnings": []
+          }
+        },
+        "limitations": [
+          "Finite empirical innovation support; no unseen standardized tail extrapolation.",
+          "Frozen cross-asset empirical dependence, conditional on the training period.",
+          "Zero log-return drift does not imply zero arithmetic expected return.",
+          "OHLC contains no intraday ordering, liquidity, volume or execution model.",
+          "Parameter and model uncertainty are not represented by drawing more paths."
+        ],
+        "method": "joint_filtered_historical_simulation",
+        "ohlc_available": true,
+        "price_basis": "adjusted",
+        "source": {
+          "alignment": {
+            "dropped_dates": [],
+            "dropped_dates_count": 0,
+            "input_dates": 4232,
+            "policy": "strict",
+            "retained_dates": 4232
+          },
+          "auto_adjust": true,
+          "frequency": "daily_observations",
+          "interpretation": "Adjusted OHLC research series; not executable historical quotes.",
+          "observed_end": "2021-12-31T00:00:00",
+          "observed_start": "2010-01-04T00:00:00",
+          "price_basis": "adjusted",
+          "provider_version": "1.7.0",
+          "requested_end_exclusive": "2026-10-30",
+          "requested_start": "2010-01-01",
+          "requested_tickers": [
+            "SPY",
+            "TLT",
+            "GLD"
+          ],
+          "source": "Yahoo Finance via yfinance"
+        },
+        "training_end": "2021-12-31",
+        "training_returns": 3020,
+        "training_start": "2010-01-04"
+      },
+      "name": "inflation_2022",
+      "portfolio": {
+        "baseline": {
+          "0.01": {
+            "alpha": 0.01,
+            "coverage": 0.9721115537848606,
+            "expected_violations_empirical_strict": 2.493377483443713,
+            "expected_violations_nominal": 2.5100000000000002,
+            "mean_es_loss": 0.020658173867826875,
+            "mean_expected_shortfall_return": -0.020658173867826875,
+            "mean_quantile_return": -0.014682185061946323,
+            "mean_var_loss": 0.014682185061946323,
+            "nominal_coverage": 0.99,
+            "observations": 251,
+            "observed_to_empirical_expected_ratio": 2.807436918990699,
+            "observed_to_nominal_ratio": 2.788844621513944,
+            "violation_rate": 0.027888446215139442,
+            "violations": 7
+          },
+          "0.05": {
+            "alpha": 0.05,
+            "coverage": 0.796812749003984,
+            "expected_violations_empirical_strict": 12.4668874172186,
+            "expected_violations_nominal": 12.55,
+            "mean_es_loss": 0.01255554008682078,
+            "mean_expected_shortfall_return": -0.01255554008682078,
+            "mean_quantile_return": -0.008180094900274602,
+            "mean_var_loss": 0.008180094900274602,
+            "nominal_coverage": 0.95,
+            "observations": 251,
+            "observed_to_empirical_expected_ratio": 4.090836653386435,
+            "observed_to_nominal_ratio": 4.063745019920319,
+            "violation_rate": 0.20318725099601595,
+            "violations": 51
+          }
+        },
+        "model": {
+          "0.01": {
+            "alpha": 0.01,
+            "coverage": 0.9840637450199203,
+            "expected_violations_empirical_strict": 2.493377483443713,
+            "expected_violations_nominal": 2.5100000000000002,
+            "mean_es_loss": 0.023720082151683523,
+            "mean_expected_shortfall_return": -0.023720082151683523,
+            "mean_quantile_return": -0.018081734227777927,
+            "mean_var_loss": 0.018081734227777927,
+            "nominal_coverage": 0.99,
+            "observations": 251,
+            "observed_to_empirical_expected_ratio": 1.6042496679946852,
+            "observed_to_nominal_ratio": 1.593625498007968,
+            "violation_rate": 0.01593625498007968,
+            "violations": 4
+          },
+          "0.05": {
+            "alpha": 0.05,
+            "coverage": 0.8764940239043825,
+            "expected_violations_empirical_strict": 12.4668874172186,
+            "expected_violations_nominal": 12.55,
+            "mean_es_loss": 0.015189484582939668,
+            "mean_expected_shortfall_return": -0.015189484582939668,
+            "mean_quantile_return": -0.010512728010041043,
+            "mean_var_loss": 0.010512728010041043,
+            "nominal_coverage": 0.95,
+            "observations": 251,
+            "observed_to_empirical_expected_ratio": 2.486586985391755,
+            "observed_to_nominal_ratio": 2.4701195219123506,
+            "violation_rate": 0.12350597609561753,
+            "violations": 31
+          }
+        }
+      },
+      "schema_version": 1,
+      "split_date": "2021-12-31T00:00:00",
+      "test": {
+        "end": "2022-12-30T00:00:00",
+        "observations": 251,
+        "start": "2022-01-03T00:00:00"
+      },
+      "training": {
+        "data_sha256": "d7c7b2332f93d7084c1c7735e5c39a43f5cfd5f49139c1d345dea1eb199f1f5e",
+        "end": "2021-12-31T00:00:00",
+        "price_observations": 3021,
+        "return_observations": 3020,
+        "start": "2010-01-04T00:00:00"
+      },
+      "warnings": [
+        "Scores and tail counts are diagnostics, not an automatic validation pass.",
+        "Parameters and the innovation law are frozen; only the observed volatility state updates.",
+        "Energy scores use a Monte Carlo second term; paired draws are shared across models and dates.",
+        "No independent-binomial p-values or dependence-robust confidence intervals are claimed.",
+        "The baseline shares the model's log-return mean; neither estimates investment alpha.",
+        "OHLC, transaction costs, intraday execution, and multi-period paths are not validated here.",
+        "Portfolio returns assume all asset returns are already in a common reporting currency.",
+        "Material undercoverage for model at the 5% portfolio tail: 31 observed breaches versus 12.55 nominal expected (2.47x). This is a descriptive heuristic, not a statistical test; probabilities are not certified.",
+        "Material undercoverage for baseline at the 5% portfolio tail: 51 observed breaches versus 12.55 nominal expected (4.06x). This is a descriptive heuristic, not a statistical test; probabilities are not certified.",
+        "The 5% tail has only 12.55 nominal expected breaches in 251 test observations; rare-event conclusions are sample-limited.",
+        "The 1% tail has only 2.51 nominal expected breaches in 251 test observations; rare-event conclusions are sample-limited."
+      ],
+      "weights": {
+        "GLD": 0.3333333333333333,
+        "SPY": 0.3333333333333333,
+        "TLT": 0.3333333333333333
+      }
+    },
+    {
+      "assets": [
+        "SPY",
+        "TLT",
+        "GLD"
+      ],
+      "coexceedances": {
+        "baseline": {
+          "0.01": [
+            {
+              "assets": [
+                "SPY",
+                "TLT"
+              ],
+              "expected_joint_violations": 0.4855552610654684,
+              "mean_predicted_joint_probability": 0.001060164325470455,
+              "observations": 458,
+              "observed_joint_rate": 0.002183406113537118,
+              "observed_joint_violations": 1
+            },
+            {
+              "assets": [
+                "SPY",
+                "GLD"
+              ],
+              "expected_joint_violations": 0.1213888152663671,
+              "mean_predicted_joint_probability": 0.00026504108136761375,
+              "observations": 458,
+              "observed_joint_rate": 0.0,
+              "observed_joint_violations": 0
+            },
+            {
+              "assets": [
+                "TLT",
+                "GLD"
+              ],
+              "expected_joint_violations": 0.2427776305327342,
+              "mean_predicted_joint_probability": 0.0005300821627352275,
+              "observations": 458,
+              "observed_joint_rate": 0.0,
+              "observed_joint_violations": 0
+            }
+          ],
+          "0.05": [
+            {
+              "assets": [
+                "SPY",
+                "TLT"
+              ],
+              "expected_joint_violations": 1.3352769679300367,
+              "mean_predicted_joint_probability": 0.002915451895043748,
+              "observations": 458,
+              "observed_joint_rate": 0.004366812227074236,
+              "observed_joint_violations": 2
+            },
+            {
+              "assets": [
+                "SPY",
+                "GLD"
+              ],
+              "expected_joint_violations": 2.306387490060963,
+              "mean_predicted_joint_probability": 0.005035780545984635,
+              "observations": 458,
+              "observed_joint_rate": 0.006550218340611353,
+              "observed_joint_violations": 3
+            },
+            {
+              "assets": [
+                "TLT",
+                "GLD"
+              ],
+              "expected_joint_violations": 4.127219719056472,
+              "mean_predicted_joint_probability": 0.009011396766498848,
+              "observations": 458,
+              "observed_joint_rate": 0.006550218340611353,
+              "observed_joint_violations": 3
+            }
+          ]
+        },
+        "model": {
+          "0.01": [
+            {
+              "assets": [
+                "SPY",
+                "TLT"
+              ],
+              "expected_joint_violations": 0.0,
+              "mean_predicted_joint_probability": 0.0,
+              "observations": 458,
+              "observed_joint_rate": 0.0,
+              "observed_joint_violations": 0
+            },
+            {
+              "assets": [
+                "SPY",
+                "GLD"
+              ],
+              "expected_joint_violations": 0.1213888152663671,
+              "mean_predicted_joint_probability": 0.00026504108136761375,
+              "observations": 458,
+              "observed_joint_rate": 0.002183406113537118,
+              "observed_joint_violations": 1
+            },
+            {
+              "assets": [
+                "TLT",
+                "GLD"
+              ],
+              "expected_joint_violations": 0.2427776305327342,
+              "mean_predicted_joint_probability": 0.0005300821627352275,
+              "observations": 458,
+              "observed_joint_rate": 0.0,
+              "observed_joint_violations": 0
+            }
+          ],
+          "0.05": [
+            {
+              "assets": [
+                "SPY",
+                "TLT"
+              ],
+              "expected_joint_violations": 1.0924993373972962,
+              "mean_predicted_joint_probability": 0.002385369732308507,
+              "observations": 458,
+              "observed_joint_rate": 0.008733624454148471,
+              "observed_joint_violations": 4
+            },
+            {
+              "assets": [
+                "SPY",
+                "GLD"
+              ],
+              "expected_joint_violations": 2.791942751126412,
+              "mean_predicted_joint_probability": 0.006095944871455048,
+              "observations": 458,
+              "observed_joint_rate": 0.010917030567685589,
+              "observed_joint_violations": 5
+            },
+            {
+              "assets": [
+                "TLT",
+                "GLD"
+              ],
+              "expected_joint_violations": 3.034720381659143,
+              "mean_predicted_joint_probability": 0.006626027034190268,
+              "observations": 458,
+              "observed_joint_rate": 0.004366812227074236,
+              "observed_joint_violations": 2
+            }
+          ]
+        }
+      },
+      "diagnostic_flags": [],
+      "evaluation": "fixed_parameter_sequential_one_step",
+      "methodology": {
+        "baseline": "Joint raw training log-return bootstrap, recentered to the fitted model mean",
+        "coexceedance_rule": "Observed and predictive events use the same model-specific marginal thresholds",
+        "energy_pairs": 4096,
+        "energy_second_term": "Uniform iid pairs with replacement; common pairs for model and baseline",
+        "expected_shortfall": "Worst alpha empirical probability mass, including fractional boundary mass",
+        "marginal_forecast": "All equally weighted training innovation rows; no simulation subsample",
+        "portfolio_units": "Decimal simple return: expm1(asset log returns) @ weights",
+        "quantile_method": "inverted_cdf",
+        "scores_units": "Decimal log returns; variogram is squared differences of order 0.5",
+        "seed": 20261030,
+        "tail_rule": "Strict return < empirical quantile; boundary probability is reported separately",
+        "undercoverage_flag": "Descriptive heuristic: nominal expected breaches >= 10 and observed/nominal >= 2; no significance claim and no forecast recalibration",
+        "variogram_order": 0.5,
+        "variogram_weights": "Equal over unordered asset pairs; weights sum to one"
+      },
+      "metrics_baseline": {
+        "crps_by_asset": {
+          "GLD": 0.008683622020716686,
+          "SPY": 0.005103803521941255,
+          "TLT": 0.0039442829835760595
+        },
+        "crps_mean": 0.005910569508744666,
+        "energy_score_mean": 0.012092853884527193,
+        "variogram_score_mean": 0.002343015901838564
+      },
+      "metrics_model": {
+        "crps_by_asset": {
+          "GLD": 0.008289099602893793,
+          "SPY": 0.0049691770232673195,
+          "TLT": 0.0038556308128259035
+        },
+        "crps_mean": 0.005704635812995673,
+        "energy_score_mean": 0.011833733168027619,
+        "variogram_score_mean": 0.002029643609820766
+      },
+      "model_summary": {
+        "assets": [
+          "SPY",
+          "TLT",
+          "GLD"
+        ],
+        "config": {
+          "mean": "zero",
+          "min_observations": 250,
+          "persistence_limit": 0.9999,
+          "volatility": "auto"
+        },
+        "data_sha256": "8534bb6e03385dabbb3ba31e18c28dff4e4cbf1d3c77af496ea6a68700b7c86d",
+        "fit": {
+          "GLD": {
+            "alpha": 0.05401006897753221,
+            "beta": 0.9273590752793446,
+            "bic": 10163.859977970844,
+            "candidate_bic": {
+              "garch": 10163.859977970844,
+              "gjr": 10168.610581842235
+            },
+            "converged": true,
+            "empirical_persistence": 0.9813691442568768,
+            "gamma": 0.0,
+            "innovation_max": 4.815081299335224,
+            "innovation_min": -6.511879382739814,
+            "mean_daily_log": 0.0,
+            "negative_second_moment": 0.531067411901432,
+            "omega": 1.8278057840050527e-06,
+            "raw_standardized_residual_mean": 0.02320839243219679,
+            "raw_standardized_residual_std": 1.0000664458262885,
+            "rejected_candidates": {},
+            "residual_acf": {
+              "1": 0.006722241572096958,
+              "10": -0.01846742347227284,
+              "20": -0.02096812061801592,
+              "5": -0.0044408554936925535
+            },
+            "residual_centering_and_scaling": "sample mean, population standard deviation",
+            "selected": "garch",
+            "squared_residual_acf": {
+              "1": 0.033618302108997924,
+              "10": 0.011960751750111905,
+              "20": -0.010259271786133208,
+              "5": -0.004177728335227752
+            },
+            "warnings": []
+          },
+          "SPY": {
+            "alpha": 0.023212914639986735,
+            "beta": 0.8219985784072154,
+            "bic": 9572.902857299847,
+            "candidate_bic": {
+              "garch": 9720.155889671005,
+              "gjr": 9572.902857299847
+            },
+            "converged": true,
+            "empirical_persistence": 0.988795746739334,
+            "gamma": 0.25016881285771375,
+            "innovation_max": 3.387644539566505,
+            "innovation_min": -7.244333782106653,
+            "mean_daily_log": 0.0,
+            "negative_second_moment": 0.5739494545780852,
+            "omega": 3.9231426720797706e-06,
+            "raw_standardized_residual_mean": 0.05354601080338456,
+            "raw_standardized_residual_std": 0.9982762123137381,
+            "rejected_candidates": {},
+            "residual_acf": {
+              "1": -0.011082403286855506,
+              "10": 0.005113741356525098,
+              "20": 0.026824653591568985,
+              "5": -0.025688144322039537
+            },
+            "residual_centering_and_scaling": "sample mean, population standard deviation",
+            "selected": "gjr",
+            "squared_residual_acf": {
+              "1": -0.01815294270240063,
+              "10": 0.012615069030643963,
+              "20": 0.006724941593594476,
+              "5": -0.015443942841874921
+            },
+            "warnings": []
+          },
+          "TLT": {
+            "alpha": 0.06729470694144297,
+            "beta": 0.9141141668666563,
+            "bic": 9834.42212930484,
+            "candidate_bic": {
+              "garch": 9834.42212930484,
+              "gjr": 9839.835985083077
+            },
+            "converged": true,
+            "empirical_persistence": 0.9814088738080993,
+            "gamma": 0.0,
+            "innovation_max": 4.275454974078647,
+            "innovation_min": -6.144201934764348,
+            "mean_daily_log": 0.0,
+            "negative_second_moment": 0.5181778674209396,
+            "omega": 1.654620085702818e-06,
+            "raw_standardized_residual_mean": 0.013266326776238707,
+            "raw_standardized_residual_std": 1.0000267739323392,
+            "rejected_candidates": {},
+            "residual_acf": {
+              "1": -0.038757104857406854,
+              "10": 0.027891493232740254,
+              "20": 0.021962541627465793,
+              "5": -0.029221993254420143
+            },
+            "residual_centering_and_scaling": "sample mean, population standard deviation",
+            "selected": "garch",
+            "squared_residual_acf": {
+              "1": 0.01991841649111933,
+              "10": -0.002045057992872312,
+              "20": 0.0038206223290235875,
+              "5": 0.002711604765401715
+            },
+            "warnings": []
+          }
+        },
+        "limitations": [
+          "Finite empirical innovation support; no unseen standardized tail extrapolation.",
+          "Frozen cross-asset empirical dependence, conditional on the training period.",
+          "Zero log-return drift does not imply zero arithmetic expected return.",
+          "OHLC contains no intraday ordering, liquidity, volume or execution model.",
+          "Parameter and model uncertainty are not represented by drawing more paths."
+        ],
+        "method": "joint_filtered_historical_simulation",
+        "ohlc_available": true,
+        "price_basis": "adjusted",
+        "source": {
+          "alignment": {
+            "dropped_dates": [],
+            "dropped_dates_count": 0,
+            "input_dates": 4232,
+            "policy": "strict",
+            "retained_dates": 4232
+          },
+          "auto_adjust": true,
+          "frequency": "daily_observations",
+          "interpretation": "Adjusted OHLC research series; not executable historical quotes.",
+          "observed_end": "2024-12-31T00:00:00",
+          "observed_start": "2010-01-04T00:00:00",
+          "price_basis": "adjusted",
+          "provider_version": "1.7.0",
+          "requested_end_exclusive": "2026-10-30",
+          "requested_start": "2010-01-01",
+          "requested_tickers": [
+            "SPY",
+            "TLT",
+            "GLD"
+          ],
+          "source": "Yahoo Finance via yfinance"
+        },
+        "training_end": "2024-12-31",
+        "training_returns": 3773,
+        "training_start": "2010-01-04"
+      },
+      "name": "recent_2025_2026",
+      "portfolio": {
+        "baseline": {
+          "0.01": {
+            "alpha": 0.01,
+            "coverage": 0.9694323144104804,
+            "expected_violations_empirical_strict": 4.49138616485553,
+            "expected_violations_nominal": 4.58,
+            "mean_es_loss": 0.020748504514089536,
+            "mean_expected_shortfall_return": -0.020748504514089536,
+            "mean_quantile_return": -0.015312959729092617,
+            "mean_var_loss": 0.015312959729092617,
+            "nominal_coverage": 0.99,
+            "observations": 458,
+            "observed_to_empirical_expected_ratio": 3.1170777764664384,
+            "observed_to_nominal_ratio": 3.056768558951965,
+            "violation_rate": 0.03056768558951965,
+            "violations": 14
+          },
+          "0.05": {
+            "alpha": 0.05,
+            "coverage": 0.9257641921397379,
+            "expected_violations_empirical_strict": 22.821097270076763,
+            "expected_violations_nominal": 22.900000000000002,
+            "mean_es_loss": 0.013332490699439644,
+            "mean_expected_shortfall_return": -0.013332490699439644,
+            "mean_quantile_return": -0.009314430137024092,
+            "mean_var_loss": 0.009314430137024092,
+            "nominal_coverage": 0.95,
+            "observations": 458,
+            "observed_to_empirical_expected_ratio": 1.48984948434452,
+            "observed_to_nominal_ratio": 1.48471615720524,
+            "violation_rate": 0.07423580786026202,
+            "violations": 34
+          }
+        },
+        "model": {
+          "0.01": {
+            "alpha": 0.01,
+            "coverage": 0.982532751091703,
+            "expected_violations_empirical_strict": 4.49138616485553,
+            "expected_violations_nominal": 4.58,
+            "mean_es_loss": 0.022466606115308676,
+            "mean_expected_shortfall_return": -0.022466606115308676,
+            "mean_quantile_return": -0.017495841788147476,
+            "mean_var_loss": 0.017495841788147476,
+            "nominal_coverage": 0.99,
+            "observations": 458,
+            "observed_to_empirical_expected_ratio": 1.7811873008379646,
+            "observed_to_nominal_ratio": 1.7467248908296944,
+            "violation_rate": 0.017467248908296942,
+            "violations": 8
+          },
+          "0.05": {
+            "alpha": 0.05,
+            "coverage": 0.9497816593886463,
+            "expected_violations_empirical_strict": 22.821097270076763,
+            "expected_violations_nominal": 22.900000000000002,
+            "mean_es_loss": 0.014904022784045415,
+            "mean_expected_shortfall_return": -0.014904022784045415,
+            "mean_quantile_return": -0.010746466957737327,
+            "mean_var_loss": 0.010746466957737327,
+            "nominal_coverage": 0.95,
+            "observations": 458,
+            "observed_to_empirical_expected_ratio": 1.0078393570565871,
+            "observed_to_nominal_ratio": 1.0043668122270741,
+            "violation_rate": 0.05021834061135371,
+            "violations": 23
+          }
+        }
+      },
+      "schema_version": 1,
+      "split_date": "2024-12-31T00:00:00",
+      "test": {
+        "end": "2026-10-29T00:00:00",
+        "observations": 458,
+        "start": "2025-01-02T00:00:00"
+      },
+      "training": {
+        "data_sha256": "8534bb6e03385dabbb3ba31e18c28dff4e4cbf1d3c77af496ea6a68700b7c86d",
+        "end": "2024-12-31T00:00:00",
+        "price_observations": 3774,
+        "return_observations": 3773,
+        "start": "2010-01-04T00:00:00"
+      },
+      "warnings": [
+        "Scores and tail counts are diagnostics, not an automatic validation pass.",
+        "Parameters and the innovation law are frozen; only the observed volatility state updates.",
+        "Energy scores use a Monte Carlo second term; paired draws are shared across models and dates.",
+        "No independent-binomial p-values or dependence-robust confidence intervals are claimed.",
+        "The baseline shares the model's log-return mean; neither estimates investment alpha.",
+        "OHLC, transaction costs, intraday execution, and multi-period paths are not validated here.",
+        "Portfolio returns assume all asset returns are already in a common reporting currency.",
+        "The 1% tail has only 4.58 nominal expected breaches in 458 test observations; rare-event conclusions are sample-limited."
+      ],
+      "weights": {
+        "GLD": 0.3333333333333333,
+        "SPY": 0.3333333333333333,
+        "TLT": 0.3333333333333333
+      }
+    }
+  ]
+}
