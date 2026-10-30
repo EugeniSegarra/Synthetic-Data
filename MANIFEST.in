@@ -1,0 +1,7 @@
+recursive-include examples *.py
+recursive-include docs *.md *.svg
+recursive-include reports *.json *.csv
+recursive-include tests *.py
+include constraints-tested.txt
+include *.py
+global-exclude *.pyc
