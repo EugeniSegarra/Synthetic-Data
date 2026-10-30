@@ -1,0 +1,42 @@
+{
+  "scope": "Retrospective SPY path comparison; default FHS unchanged; not production VaR approval",
+  "local_module_sha256": "0990df6a03d1c438239f18eeda46c2c7df3e3313c46ac2835b084d4814911f42",
+  "input_csv_sha256": "264ff7216c975000c8ffb8be3fd45a79d37d9642d22c05a1b63f68742e0428c6",
+  "requested_origins": 316,
+  "main_evaluation_origins": 136,
+  "paths_per_method_origin": 2000,
+  "main_evaluation_start": "2015-01-13",
+  "last_forecast_origin": "2026-04-23",
+  "last_126_session_target": "2026-10-22",
+  "main_sample": [
+    {"method":"fhs","horizon":126,"origins":136,"max_drawdown_crps":0.0387525944813563,"max_drawdown_coverage90":0.8308823529411765,"kernel_path_score":0.1776806027842597,"recovery_prob":0.6826739130434784,"recovery_actual":0.8260869565217391},
+    {"method":"iid","horizon":126,"origins":136,"max_drawdown_crps":0.042177626551340205,"max_drawdown_coverage90":0.6544117647058824,"kernel_path_score":0.19383864561240416,"recovery_prob":0.6767608695652175,"recovery_actual":0.8260869565217391},
+    {"method":"block","horizon":126,"origins":136,"max_drawdown_crps":0.039495428921440826,"max_drawdown_coverage90":0.7426470588235294,"kernel_path_score":0.18844995820312244,"recovery_prob":0.6505347826086955,"recovery_actual":0.8260869565217391},
+    {"method":"analog","horizon":126,"origins":136,"max_drawdown_crps":0.054214552497902385,"max_drawdown_coverage90":0.6029411764705882,"kernel_path_score":0.20680617885328403,"recovery_prob":0.6105652173913044,"recovery_actual":0.8260869565217391},
+    {"method":"analog_area","horizon":126,"origins":136,"max_drawdown_crps":0.05212388045982791,"max_drawdown_coverage90":0.5882352941176471,"kernel_path_score":0.20607766920046036,"recovery_prob":0.6081608695652173,"recovery_actual":0.8260869565217391},
+    {"method":"mixture","horizon":126,"origins":136,"max_drawdown_crps":0.03933503607712791,"max_drawdown_coverage90":0.8088235294117647,"kernel_path_score":0.18259794359010326,"recovery_prob":0.6573,"recovery_actual":0.8260869565217391}
+  ],
+  "fhs_coverage": [
+    {"horizon":21,"origins":136,"terminal_return_coverage90":0.9264705882352942,"realized_volatility_coverage90":0.8970588235294118,"max_drawdown_coverage90":0.8602941176470589},
+    {"horizon":63,"origins":136,"terminal_return_coverage90":0.9264705882352942,"realized_volatility_coverage90":0.8382352941176471,"max_drawdown_coverage90":0.8529411764705882},
+    {"horizon":126,"origins":136,"terminal_return_coverage90":0.9264705882352942,"realized_volatility_coverage90":0.8382352941176471,"max_drawdown_coverage90":0.8308823529411765}
+  ],
+  "remote_reproduction": {
+    "run": 41037359983,
+    "source_commit": "ab8e32a4527f12d183ce466ffbd683aa76652dba",
+    "status": "success",
+    "referee": {
+      "verdict": "PASS: implementation/evidence consistency within checked scope",
+      "not_certified": "market calibration, absence of all bugs, independent peer review or production VaR",
+      "independence": "separate executable scalar reference algorithms; same authoring assistant",
+      "realized_path_oracles_checked": 948,
+      "forecast_rows": 5688,
+      "requested_origins": 316,
+      "complete_origins": 316,
+      "evaluation_origins": 136,
+      "manifest_sha256": "90990784ce2f6bbf483df7f8bff71335f27ccf20b3f93102c0d0d8af08feaa9a",
+      "input_sha256": "264ff7216c975000c8ffb8be3fd45a79d37d9642d22c05a1b63f68742e0428c6"
+    },
+    "numerical_note": "Cross-environment small floating-point differences are observed. Input/source hashes agree, all main-sample 90% coverage decisions agree, and published main-sample rounded scores agree. No bitwise-identical cross-platform claim."
+  }
+}
