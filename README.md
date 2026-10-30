@@ -9,6 +9,47 @@ strict data contracts, chronological evaluation, reproducible artifacts, and
 numerical/adversarial regression tests. This is a risk-scenario engine; it does
 not forecast alpha or certify a trading strategy.
 
+## Full-path SPY evidence
+
+One-day validation does not certify six-month drawdowns. The new
+[`path_validation` module](src/synthetic_market/path_validation.py) evaluates
+complete daily paths at 21, 63 and 126 sessions: terminal dispersion, maximum
+drawdown, underwater duration, first loss-barrier passage and censored recovery.
+It compares the published FHS with iid and stationary-block bootstraps,
+conditional historical analogues, a path-area ablation, and an online mixture
+that learns only from fully matured forecasts. **The FHS default is unchanged.**
+
+The recorded study has 316 rolling origins, 2,000 paths per origin and method,
+and 136 main-sample origins from 2015 onward. At 126 sessions, FHS's nominal
+central 90% interval covers **83.09% of realized maximum drawdowns**, versus
+92.65% of terminal returns. Seventeen drawdowns fall below its fifth percentile;
+six exceed its 95th percentile, and **all six upper breaches share the same
+February 2020 peak**. They are not six independent crises. Neither the analogue
+models nor the adaptive mixture establishes a six-month improvement over FHS.
+
+Read the [fixed experiment protocol](docs/path_protocol_2026-10-30.md),
+[interdisciplinary research and implemented transfers](docs/path_research.md),
+and [full empirical report, limitations and reproduction](docs/spy_path_validation_report.md).
+The complete suite contains **198 tests**. A separate executable numerical
+referee checks results against independent scalar algorithms; it is not human
+peer review or a separate language-model certification.
+
+```bash
+synthetic-market download --tickers SPY --start 1993-01-01 --end 2026-10-30 \
+  --out outputs/spy-input
+python -m synthetic_market.path_validation \
+  --csv outputs/spy-input/input.csv --metadata outputs/spy-input/input_metadata.json \
+  --price-basis adjusted --out outputs/spy-paths
+python examples/audit_path_study.py --results outputs/spy-paths \
+  --input outputs/spy-input/input.csv --out outputs/path-referee.json
+```
+
+Install first using the instructions below. Preserve the input snapshot: Yahoo
+can revise history, and a fresh download need not reproduce an earlier snapshot
+bit for bit. Every output directory/file must be new. The study is retrospective
+rolling-origin evidence, not a prospectively untouched period or production VaR
+approval. [Remote full-study reproduction](https://github.com/EugeniSegarra/Synthetic-Data/actions/runs/41037359983).
+
 ## Run it
 
 Python 3.11–3.13. From a fresh checkout:
