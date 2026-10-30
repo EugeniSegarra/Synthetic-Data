@@ -9,6 +9,37 @@ strict data contracts, chronological evaluation, reproducible artifacts, and
 numerical/adversarial regression tests. This is a risk-scenario engine; it does
 not forecast alpha or certify a trading strategy.
 
+## Second-generation factorial research
+
+The experimental `synthetic_market.research2` layer crosses drift, daily HARCH
+volatility and causal state-conditioned shocks, with delayed model selection and
+21/63/126/252-session path evaluation. Four separate SPY/EWJ/EEM/VGK studies produce
+36,828 forecast records; the current suite contains **238 tests**.
+
+**No candidate passes the predeclared six-month promotion screen. The default FHS
+is unchanged.** On common SPY origins, a shrunk historical log mean improves
+terminal-return CRPS by 11.70% but maximum-drawdown CRPS by only 2.18%; this is not
+alpha or a proof of calibrated risk. HARCH/state changes do not transfer consistently.
+The declared six-month economic alarm policy performs exactly like always alert.
+
+Read the [results and economic limits](docs/fhs2_results.md),
+[research and access scope](docs/fhs2_research.md),
+[23-task delivery ledger](docs/fhs2_task_ledger.md),
+[locked protocol](docs/fhs2_protocol_2026-10-30.md), and
+[numerical review](docs/fhs2_adversarial_review.md).
+
+```bash
+python -m synthetic_market.research2 evaluate --csv input.csv --price-basis adjusted --out outputs/SPY
+python examples/audit_fhs2.py --results outputs/SPY --input input.csv --out outputs/referee.json
+python -m synthetic_market.research2 issue --csv input.csv --price-basis adjusted --out outputs/issuance
+```
+
+The extensions are univariate research comparators; the original multi-asset API
+remains available. Event recalibration is not a corrected path distribution,
+stress scenarios have no estimated probabilities, and bootstrap parameter mixtures
+are sensitivity exercises rather than calibrated posterior predictions. A newly
+created forecast file does not prove prospective issuance at its input cutoff.
+
 ## Full-path SPY evidence
 
 One-day validation does not certify six-month drawdowns. The new
@@ -30,7 +61,7 @@ models nor the adaptive mixture establishes a six-month improvement over FHS.
 Read the [fixed experiment protocol](docs/path_protocol_2026-10-30.md),
 [interdisciplinary research and implemented transfers](docs/path_research.md),
 and [full empirical report, limitations and reproduction](docs/spy_path_validation_report.md).
-The complete suite contains **198 tests**. A separate executable numerical
+The prior full-path release contained **198 tests** (238 with the research extension). A separate executable numerical
 referee checks results against independent scalar algorithms; it is not human
 peer review or a separate language-model certification.
 

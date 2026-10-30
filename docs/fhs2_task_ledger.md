@@ -1,0 +1,35 @@
+# FHS2 delivery ledger: 23 tasks, explicit remaining scope
+
+Information cutoff: 30 October 2026. This ledger distinguishes executed work from reviewed approaches and still-open research. No task is called completed merely because it appears in a plan. The default FHS is unchanged. Numerical software acceptance is not market-risk certification.
+
+| Task | Delivered evidence | Status and remaining boundary |
+|---|---|---|
+| 1. Frozen reference | Base `4230097`, original input SHA256, baseline source hashes, all 198 original tests and old reports preserved | Implemented. New RNG coupling is documented; the earlier Monte Carlo output is not overwritten. |
+| 2. Definitions and horizons | Complete daily paths, 21/63/126/252 sessions; terminal, RMS volatility, MDD, underwater time, barriers and censored recovery | Implemented for adjusted daily closes. No intraday execution claim. |
+| 3. State-dependent diagnosis | Fixed causal volatility bins, rising/falling scale, past trend and prior drawdown, all recorded per forecast | Implemented. Sparse and overlapping state groups are descriptive, not independent regimes. |
+| 4. Controlled experiments | 2x2x2 factorial; common uniforms; exactly identical risk paths within drift pairs | Implemented. Differences identify simulation mechanisms, not economic causation. |
+| 5. Locked protocol | Protocol commit `72fdf8615751f59a10428c8d891bbbec16c15bf8` precedes outcome inspection | Implemented retrospectively. Known history cannot become an untouched test again. |
+| 6. Expected return | Expanding log mean shrunk to zero with 5,040 pseudo-observations; prior sensitivity | Partial. Rate-plus-premium specification not implemented; negative/zero rates need a separate dated yield contract, not the price adapter. |
+| 7. Multiple volatility scales | Executable HARCH(1,5,22) QMLE, independent recursions and library one-step checks | Partial. HARCH is not Component-GARCH or intraday HAR-RV. Those and Realized GARCH remain unimplemented. |
+| 8. Volatility normalization | Open-loop 252-session paths, 21/63/126/252 RMS comparisons and conditional sigma sensitivity | Implemented comparison; no consistent multiscale advantage found. No claim that all normalization mechanisms were exhausted. |
+| 9. Regimes and transitions | Four observable past-only states, recomputed along simulated risk paths | Partial. No hidden-state HMM, semi-Markov or GAS estimation implemented. Their full model identification remains open. |
+| 10. Conditional innovation law | Global/local empirical mixture; exact state-wise weighted zero mean/unit variance; state counts and moments | Implemented. State-conditioned FHS sometimes fails a conservative stability guard and is visibly unavailable. |
+| 11. Advanced research | Primary-source mechanism/assumption/falsification review covering rough volatility, Hawkes, EVT, GAN, diffusion and path signatures | Reviewed, not implemented for these advanced families. No superiority or rejection of an entire family is claimed. |
+| 12. Model uncertainty | Block-bootstrap drift, 180 parameter refits over six states, actual-history refiltering, explicit rejected refits, equal-weight sensitivity mixtures and independent seeds | Partial. Sensitivity is not a calibrated Bayesian posterior, full structural uncertainty law or an out-of-sample-validated parameter mixture. |
+| 13. Data foundation | Original SPY, separate EWJ/EEM/VGK snapshots, NYSE calendar checks, source hashes and acquisition failures | Partial. VIX/IRX failed the strict price wrapper and were not used; VIX3M retained separately. No historical-vintage macro feed or intraday dataset validated. |
+| 14. Probability evaluation | CRPS, tail CRPS, path kernel, 90% coverage with separate tails, 5/10/20% first-passage and recovery scores | Implemented for supplied daily history; aggregate coverage alone never passes promotion. |
+| 15. Temporal dependence | Simulated state transitions, existing full-grid path geometry, return-order counterexamples, underwater and barrier diagnostics | Implemented scoped tests. Full signature kernels and residual-block variants are not newly added. |
+| 16. Pseudoreplication | Dependent-origin bootstrap, non-overlap phases, peak/trough episode identifiers, common-case denominators | Implemented approximate inference. Effective independent crisis count is not inferred from Monte Carlo path count or from four correlated markets. |
+| 17. Generalization | Four separate rolling market studies, delayed inner selection, fixed epochs, multiple-comparison intervals, immutable timestamped issuance command | Partial. This is fixed-model rolling inner selection, not a full nested hyperparameter search. No completed prospective test or full leave-crisis-out training exercise is claimed. |
+| 18. Recalibration and stress | Matured-only shrunk isotonic event probabilities, hypothetical probability-free stress paths | Partial. Conformal calibration and rare-event splitting reviewed but not implemented. Event calibration is not a corrected path law. |
+| 19. Economic utility | Predeclared false-positive=1 / false-negative=5 alarm loss, always/never comparators, explicit counts | Partial. At six months all methods always alert under this loss: no economic advantage demonstrated. No trading P&L, liquidity or execution-cost backtest. |
+| 20. Software | Separate `research2` package, Python API and evaluate/issue CLI, atomic bundles, immutable source/input checks | Implemented research scope; old core unchanged. New extensions are univariate; original multivariate engine remains available. |
+| 21. Adversarial review | 40 new tests, 238 total; scalar referee all four studies; five-origin independent pairwise-score replay | Implemented. Algorithms are separate but authored by the same assistant, not independent external peer review. |
+| 22. Promotion | Predeclared >=5% primary improvement, simultaneous upper interval <0, <=2% guardrail deterioration; no retrospective automatic promotion | Implemented. No candidate passes the six-month screen in any tested market. |
+| 23. Publication | Research branch/PR, executable source, tests, literature, evidence, reproducibility workflow and full result bundles | Delivered as a research extension, not a fully certified production risk system. Final exact-head CI is recorded in the PR. |
+
+## Dependencies and remaining work
+
+Yield/macro and intraday contracts precede rate-plus-premium and Realized GARCH work. HMM/GAS or neural models require a separately locked selection experiment, not retuning this result. Any newly selected production method needs external/prospective evidence and an explicit operational policy for unavailable models. Real portfolio utility requires a specified investment decision, liquidity/execution data and costs, which this abstract alarm loss does not supply.
+
+The experiment answers whether these specific modular changes improve observed daily path forecasts. It does not close every research direction in the 23-task program. Open items are retained instead of being renamed as completed work.

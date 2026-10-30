@@ -1,0 +1,100 @@
+{
+  "cutoff": "2026-10-30",
+  "base_commit": "4230097d819d403e9a8a9451077da3002f1a74a8",
+  "protocol_commit": "72fdf8615751f59a10428c8d891bbbec16c15bf8",
+  "methods": 8,
+  "delayed_selector_methods": 1,
+  "default_promoted": false,
+  "local_tests_passed": 238,
+  "original_tests_preserved": 198,
+  "numerical_referee_independence": "independent algorithms, same author; not independent human or model review",
+  "assets": {
+    "SPY": {
+      "origins": 321,
+      "forecast_rows": 11214,
+      "realized_targets": 1266,
+      "input_sha256": "264ff7216c975000c8ffb8be3fd45a79d37d9642d22c05a1b63f68742e0428c6",
+      "manifest_sha256": "3a817ba0bd8d479b66bd0bce9bd8f587edbcd36d3886fe11712691d64907146d",
+      "forecast_csv_sha256": "a50902d6210281320d193f600308626fb64b13f07a5ad3295d4b9ccad019d4b5",
+      "numerical_referee_passed": true,
+      "source_hashes_identical_to_SPY": true
+    },
+    "EWJ": {
+      "origins": 306,
+      "forecast_rows": 10854,
+      "realized_targets": 1206,
+      "input_sha256": "1866e21b5bab97b946bd0895be003abe8069b1183664a6b81bdd48af7fe4297e",
+      "manifest_sha256": "3e88cf89ad92cba9b365298c97a8e211f11e1c06e3805cfa6873388c8149f0c1",
+      "forecast_csv_sha256": "bd2360b590b9d794e9fc8702a0b49f236ec1896bfb2d0ab3cf7972d7a2b21867",
+      "numerical_referee_passed": true,
+      "source_hashes_identical_to_SPY": true
+    },
+    "EEM": {
+      "origins": 222,
+      "forecast_rows": 7782,
+      "realized_targets": 870,
+      "input_sha256": "3fbcd380caf338018daea66409694539d2537f45122cee0898b566000a8d8025",
+      "manifest_sha256": "a2ea1499d1f7383a384a3fd7fad4c7db062f1f437c10e93c2423a1682491b8af",
+      "forecast_csv_sha256": "15c68b40a28af102030de300fca524db0045b5e204e33bfa89375d8b79713681",
+      "numerical_referee_passed": true,
+      "source_hashes_identical_to_SPY": true
+    },
+    "VGK": {
+      "origins": 199,
+      "forecast_rows": 6978,
+      "realized_targets": 778,
+      "input_sha256": "348f64216231ed708422d436f1f256e697ac72d614be12be732adc08a7d585db",
+      "manifest_sha256": "09944addf41b0482bde4e4959ad1cdb4f0c7be17da1ea6804c417935ffd97b96",
+      "forecast_csv_sha256": "76c52ff78ed7c42205bf00139f3a0f2fe43436527a871e2ee8cac39a05650206",
+      "numerical_referee_passed": true,
+      "source_hashes_identical_to_SPY": true
+    }
+  },
+  "remote_reproduction": {
+    "workflow_run": 41141742760,
+    "head_sha": "9794d265aec7c7fd35ffc8746cd60c32e1c00b76",
+    "rows": 11214,
+    "source_hashes_identical": true,
+    "all_coverage_decisions_equal": true,
+    "remote_manifest_sha256": "2e73bfa0b49ec37d4c8a246ab7097d355f47c6991d9351f580fba762ca23fac6",
+    "maximum_absolute_difference": 0.0,
+    "artifact_id": 13019281006
+  },
+  "source_hashes": {
+    "__init__.py": "8036663c1f70b217add49003ac56e4d04cf13f976be17bfd7dfa93f471f9e557",
+    "__main__.py": "f9eba91210fea277a80405539502572f275a02a0ee4d77a57509284cbcba5b6e",
+    "cli.py": "11b6b536586c8ab0caa7b2d29d3b5b2d3b6ffe2deefff6cee4e51b1b493bc5e9",
+    "data.py": "512a741f060c8fd2bb293df1c0c61d10a9b0d4317b6efe6e8a53b9c01444445b",
+    "model.py": "29994916eed8272bb50e108a28d451e41502cd376a94544af56ef6493ea843b6",
+    "path_validation.py": "0990df6a03d1c438239f18eeda46c2c7df3e3313c46ac2835b084d4814911f42",
+    "research2/__init__.py": "5f3f0025bfaa5c376b3831b0b1340e0f81abb70df7a0007f7402260ca6fcd369",
+    "research2/__main__.py": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+    "research2/cli.py": "3073b4ea84092eb39c84bfcc0f7720ebc36235099bec25b6a87c2477af6c64f1",
+    "research2/controls.py": "91317dfd11cef4177563231341c648ab5fd8c0b04ccbecc976391eb82afbe558",
+    "research2/evaluation.py": "b69e1ef20095bf8891a18a20ec4c5768aeb3113e8edd3ed88ce10dd39dfc6c44",
+    "research2/generators.py": "d129255c3b0b62de9843fed64626afe32178c0ecdedd14e59bcee4889665c788",
+    "validation.py": "1ab2d8cca02d2e04e1de2818ec78668bed18e8eb083a74f5fb0cb5c45a1ce488"
+  },
+  "calendar_checks": {
+    "SPY": {"rows": 8496, "expected": 8496, "missing": [], "extra": []},
+    "EWJ": {"rows": 7705, "expected": 7705, "missing": [], "extra": []},
+    "EEM": {"rows": 5925, "expected": 5925, "missing": [], "extra": []},
+    "VGK": {"rows": 5445, "expected": 5445, "missing": [], "extra": []}
+  },
+  "parameter_sensitivity": {
+    "attempts": 180,
+    "accepted": 171,
+    "rejected": 9,
+    "source_sha256": "d94a7a4ba7c8da0ff09aa94a980277cd9b276c47e7465704a65a309cffe0fd38",
+    "result_sha256": "9b87d43acd95b1ac6293d1098614b7ca58030a81f8de9bf972829516ca619d7b"
+  },
+  "sampled_pairwise_CRPS_checks": 120,
+  "raw_provider_histories_committed": false,
+  "limitations": [
+    "known revisable history, not prospective point-in-time evidence",
+    "four markets share global episodes",
+    "common-support inference conditions on admissible fits",
+    "economic loss is abstract and no advantage was demonstrated",
+    "unimplemented work is explicitly retained in docs/fhs2_task_ledger.md"
+  ]
+}

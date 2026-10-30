@@ -49,3 +49,17 @@ jobs:
           /tmp/wheel-check/bin/python -m pip install dist/*.whl
           cd /tmp
           /tmp/wheel-check/bin/python -m synthetic_market demo --observations 500 --paths 4 --horizon 3 --out /tmp/installed-wheel-demo
+          /tmp/wheel-check/bin/python - <<'PY'
+          from synthetic_market.data import MarketData, make_demo_data, write_csv
+          d = make_demo_data(n_obs=700)
+          write_csv(MarketData(d.close.iloc[:, :1], metadata=d.metadata), '/tmp/installed-research-input.csv')
+          PY
+          /tmp/wheel-check/bin/python -m synthetic_market.research2 issue --csv /tmp/installed-research-input.csv --price-basis adjusted --train-window 500 --paths 50 --out /tmp/installed-research-issue
+          /tmp/wheel-check/bin/python - <<'PY'
+          import json
+          from pathlib import Path
+          import synthetic_market.research2 as module
+          assert '/tmp/wheel-check/' in str(Path(module.__file__).resolve())
+          result = json.loads(Path('/tmp/installed-research-issue/issuance.json').read_text())
+          assert result['status'] == 'unscored_snapshot_not_proof_of_prospective_issuance'
+          PY

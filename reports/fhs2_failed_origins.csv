@@ -1,0 +1,36 @@
+asset,origin,component,error
+SPY,2000-03-03,fhs_state,"a state violates GJR variance stability: [0.9961339410123182, 1.0027277694796002, 0.9965952251702843, 1.0014034205662943]"
+SPY,2000-04-03,fhs_state,"a state violates GJR variance stability: [0.9959181197531457, 1.0025101979797624, 0.9949883129315122, 1.0004507924989747]"
+SPY,2000-05-03,fhs_state,"a state violates GJR variance stability: [0.9951970428775494, 1.0026568230578372, 0.993511059206929, 1.0014236338682991]"
+SPY,2000-06-02,fhs_state,"a state violates GJR variance stability: [0.9926830068906628, 1.0003061581621164, 0.9912677611308427, 0.9987867142418957]"
+SPY,2009-11-09,delayed_selector,chosen candidate unavailable: fhs_state_shrink; no replacement
+SPY,2009-11-09,fhs_state,"a state violates GJR variance stability: [0.9987097321711098, 1.0000175068145882, 0.9984334122620151, 0.9960267934974718]"
+SPY,2010-02-10,delayed_selector,chosen candidate unavailable: fhs_state_shrink; no replacement
+SPY,2010-02-10,fhs_state,"a state violates GJR variance stability: [0.9983668868683462, 1.0006693886258886, 0.9979967149318688, 0.9958008511890992]"
+SPY,2010-03-12,delayed_selector,chosen candidate unavailable: fhs_state_shrink; no replacement
+SPY,2010-03-12,fhs_state,"a state violates GJR variance stability: [0.9979714137662834, 1.0001872669850247, 0.9972748737361328, 0.9950030446100278]"
+SPY,2010-04-13,delayed_selector,chosen candidate unavailable: fhs_state_shrink; no replacement
+SPY,2010-04-13,fhs_state,"a state violates GJR variance stability: [0.9986338727250785, 1.0009783224356374, 0.9977717385510105, 0.995417768594499]"
+SPY,2010-06-11,delayed_selector,chosen candidate unavailable: fhs_state_shrink; no replacement
+SPY,2010-06-11,fhs_state,"a state violates GJR variance stability: [1.0000993046874551, 1.0025467439110147, 0.9985951709098378, 0.9962235455217107]"
+SPY,2010-07-13,fhs_state,"a state violates GJR variance stability: [0.9996801792107017, 1.0021124703939788, 0.9986484899868205, 0.9955969424859533]"
+SPY,2010-08-11,fhs_state,"a state violates GJR variance stability: [0.9996532104991487, 1.0022797487160453, 0.9989955224486345, 0.9958922472460685]"
+SPY,2010-09-10,fhs_state,"a state violates GJR variance stability: [0.998996424432398, 1.0019723893241346, 0.9988110667576804, 0.9954935025277346]"
+SPY,2010-10-11,fhs_state,"a state violates GJR variance stability: [0.9990604474917408, 1.0015359093870835, 0.9988298123707076, 0.9954570518525594]"
+SPY,2010-11-09,fhs_state,"a state violates GJR variance stability: [0.9975814392230528, 1.000757410406152, 0.9979841327894152, 0.9947400879739936]"
+SPY,2010-12-09,fhs_state,"a state violates GJR variance stability: [0.9971743236624634, 1.0002213005654137, 0.9977314651376732, 0.9944188011420846]"
+SPY,2011-01-10,fhs_state,"a state violates GJR variance stability: [0.9978693053161337, 1.00101354770576, 0.998368155181112, 0.9949743495669476]"
+SPY,2011-02-09,fhs_state,"a state violates GJR variance stability: [0.9980501092818933, 1.0008608662154714, 0.9981773475615917, 0.9948204427957115]"
+SPY,2020-04-16,fhs_state,"a state violates GJR variance stability: [0.9984052688265722, 1.0048606435081573, 0.9979278377470222, 1.0028712252933139]"
+SPY,2022-09-15,harch,HARCH coefficients violate positivity/stability
+EEM,2013-04-18,delayed_selector,chosen candidate unavailable: fhs_state_shrink; no replacement
+EEM,2013-04-18,fhs_state,"a state violates GJR variance stability: [0.9958088962443881, 1.0000935007479792, 0.9962178041980184, 0.9988542713698967]"
+EEM,2013-05-17,delayed_selector,chosen candidate unavailable: fhs_state_shrink; no replacement
+EEM,2013-05-17,fhs_state,"a state violates GJR variance stability: [0.9965757150575694, 1.000269322471238, 0.9966410807883739, 0.9990746041408279]"
+EEM,2013-06-18,delayed_selector,chosen candidate unavailable: fhs_state_shrink; no replacement
+EEM,2013-06-18,fhs_state,"a state violates GJR variance stability: [0.9965935755010706, 1.0001974476769335, 0.9965492915228448, 0.9990889810921135]"
+EEM,2013-07-18,delayed_selector,chosen candidate unavailable: fhs_state_shrink; no replacement
+EEM,2013-07-18,fhs_state,"a state violates GJR variance stability: [0.9963837401791246, 0.9999931587834675, 0.9963098518382604, 0.9986333842604357]"
+VGK,2010-05-12,fhs_state,"a state violates GJR variance stability: [1.0001468009847025, 0.9978803426546393, 0.9962061089132302, 0.998113084912999]"
+VGK,2010-08-11,fhs_state,"a state violates GJR variance stability: [1.0004898195883563, 0.9986464200275222, 0.9965039498359352, 0.9983522380752564]"
+VGK,2011-01-10,fhs_state,"a state violates GJR variance stability: [0.9999036824837155, 0.9975740043970368, 0.9967069688331129, 0.9983419496910555]"
